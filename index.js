@@ -1,9 +1,11 @@
 const express = require('express')
 const app = express()
 const db = require('@cyclic.sh/dynamodb')
+const cors = require('cors')
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.use(cors())
 // #############################################################################
 // This configures static hosting for files in /public that have the extensions
 // listed in the array.
